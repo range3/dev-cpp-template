@@ -21,6 +21,7 @@
       },
       "extensions": [
         "eamodio.gitlens",
+        "ms-vscode.cmake-tools",
         "ms-vscode.cpptools-extension-pack",
         "ms-python.python",
         "ms-python.vscode-pylance",
