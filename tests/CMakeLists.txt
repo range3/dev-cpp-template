@@ -13,6 +13,12 @@ macro(register_test testname testfilepath)
             ${PROJECT_NAME}::${PROJECT_NAME}
   )
   target_include_directories(${testname} PRIVATE $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/src>)
+  set_target_properties(
+    ${EXE_TARGET_NAME}
+    PROPERTIES CXX_EXTENSIONS OFF
+               CXX_STANDARD_REQUIRED ON
+               OUTPUT_NAME "devcpp"
+  )
   add_test(NAME ${testname} COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${testname})
 endmacro()
 
