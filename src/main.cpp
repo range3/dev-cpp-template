@@ -10,7 +10,7 @@
 
 using ordered_json = nlohmann::ordered_json;
 
-int main(int argc, char const *argv[]) {
+auto main(int argc, char const* argv[]) -> int {
   cxxopts::Options options("devcpp", "devcpp - a template for c++ projects");
   // clang-format off
   options.add_options()
@@ -42,4 +42,6 @@ int main(int argc, char const *argv[]) {
     std::cout << std::setw(4);
   }
   std::cout << tscc_result << std::endl;
+
+  return 0;
 }
